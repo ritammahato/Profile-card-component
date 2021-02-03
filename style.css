@@ -1,0 +1,213 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Dark cyan: hsl(185, 75%, 39%)
+Very dark desaturated blue: hsl(229, 23%, 23%)
+Dark grayish blue: hsl(227, 10%, 46%)
+
+### Neutral
+
+Dark gray: hsl(0, 0%, 59%)
+
+## Typography
+
+### Body Copy
+
+- Font size (name and stats): 18px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
+ */
+
+
+:root{
+    font-size: 18px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(0, 11%, 12%);
+    
+}
+
+section {
+    background-color: hsl(185, 75%, 39%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-holder {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    border: 5px solid white;
+    overflow: hidden;
+    margin: -55px auto 30px auto;
+}
+
+.img-holder img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card {
+    width: 375px;
+    background-color: whitesmoke;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align:center;
+    position: relative;
+}
+
+
+
+.card-header {
+    background-image: url(/images/bg-pattern-card.svg);
+    background-size: cover;
+    height: 150px;
+}
+
+.card-body {
+    text-align: center;
+    padding: 0 20px 30px;
+
+}
+
+.name-age {
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.age,
+.city,
+.meta{
+    font-weight:400;
+    color: hsl(0, 0%, 59%);
+    opacity: .9;
+}
+
+.name-age,
+.value {
+    color: hsl(229, 23%, 23%);
+}
+
+.age {
+    font-weight:400;
+    margin-left: 6px;
+}
+
+.city {
+    font-size: .9rem;
+}
+
+
+.card-footer {
+    display: flex;
+    border-top: 1px solid hsl(0, 3%, 86%);
+    padding:0 25px;
+}
+
+.card-footer .item {
+    flex: 1;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+.card-footer .item .value {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.card-footer .item .meta {
+    font-size:.7rem;
+    letter-spacing: 1px;
+}
+
+/* GRAPHICS CIRCLES */
+.circles .c1,
+.circles .c2{
+    position:absolute;
+    animation: 2s circles forwards;
+    opacity: 0;
+}
+
+.circles .c1 {
+    top: -27.7rem;
+    left: -14.5rem;
+    transform: translate(-100px, -50px);
+}
+
+.circles .c2 {
+    bottom: -35.5rem;
+    right: -11.5rem;
+    transform: translate(100px, 50px);
+}
+
+@keyframes circles {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transition:.4s;
+    padding: 20px;
+    background: white;
+    text-align: center;
+}
+
+.attribution:hover {
+    transform: translateY(0);
+}
+
+.attribution::before{
+    content: '';
+    background: rgb(233, 233, 10%);
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom:100%;
+    left: 0;
+    z-index: 10;
+}
+
+
